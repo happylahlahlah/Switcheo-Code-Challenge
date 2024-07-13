@@ -1,0 +1,257 @@
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #213B4B;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+header h1 {
+  font-size: 1.7em;
+  color: #ffffff;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
+.swap-container {
+  background: #f7f8fa;
+  border-radius: 10px;
+  width: 40%;
+
+}
+
+.swap {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #213B4B;
+}
+
+.swap-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.swap-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 400px;
+  position: relative;
+}
+
+.swap-input label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 18px;
+  background-color: #f7f8fa;
+  padding: 0 5px;
+  color: #213B4B;
+}
+
+.swap-input input[type="number"] {
+  font-size: 30px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  padding: 20px 10px 10px 10px;
+  color: #213B4B;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+input[type="number"]:focus, .dropdown-button:focus, .connect-wallet:focus {
+  border-color: #213B4B;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.custom-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-button {
+  background-color: #f9f9f9;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-button img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 300px; /* set a maximum height for the dropdown */
+  overflow-y: auto;
+}
+
+.dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-content div img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown-content div:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+
+.connect-wallet {
+  background: #213B4B;
+  border: none;
+  color: #D9E15B;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+.swap-footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.wallet-info {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.price-change {
+  color: #397193;
+}
+
+.swap-button {
+  background-color: #213B4B;
+  color: #D9E15B;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.swap-button:hover {
+  background-color: #1a2d3c;
+}
+
+.side-panel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  background-color: #213B4B;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  color: white;
+}
+
+.side-panel h2 {
+  padding: 16px;
+  text-align: center;
+}
+
+.side-panel p {
+  padding: 16px;
+  text-align: center;
+}
+
+.close-panel-button {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

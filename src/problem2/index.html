@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title>Fancy Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- You may add more stuff here -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+        <h1>Fancy Swap</h1>
+    </header>
+    <main>
+        <div class="swap-container">
+            <div class="swap">
+                <h2>Swap</h2>
+                    <div class="swap-box">
+                        <div class="swap-input">
+                            <label for="sellAmount">Sell</label>
+                            <input type="number" id="sellAmount" placeholder="0">
+                            <div class="custom-dropdown">
+                                <button id="sellTokenButton" class="dropdown-button">Select Token</button>
+                                <div id="sellTokenDropdown" class="dropdown-content"></div>
+                            </div>
+                            <div id="sellError" class="error-message"></div>
+                        </div>
+                        <button id="swapButton" class="swap-button">⇅</button>
+                        <div class="swap-input">
+                            <label for="buyAmount">Buy</label>
+                            <input type="number" id="buyAmount" placeholder="0">
+                            <div class="custom-dropdown">
+                                <button id="buyTokenButton" class="dropdown-button">Select Token</button>
+                                <div id="buyTokenDropdown" class="dropdown-content"></div>
+                            </div>
+                            <div id="buyError" class="error-message"></div>
+                        </div>
+                    </div>
+                    <button id="connectWalletButton" class="connect-wallet">Connect wallet</button>
+                    <div id="walletInfo" class="wallet-info"></div>
+                </div>
+            <div class="swap-footer">
+                <p id="priceInfo"> </p>
+            </div>
+        </div>
+    </main>
+</div>
+<div id="sidePanel" class="side-panel">
+    <button id="closePanelButton" class="close-panel-button">&times;</button>
+    <h2>Connect Your Wallet</h2>
+    <p>Placeholder for wallet connection options</p>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
